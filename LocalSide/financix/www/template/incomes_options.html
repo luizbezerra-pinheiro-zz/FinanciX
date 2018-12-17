@@ -1,0 +1,74 @@
+<div>
+
+    <script> showDayOptions(); StockChoosedWallet();</script>
+
+    <div>
+
+        <div class="mobile-wrapper">
+
+            <span class="control-label col-sm-2" id = 'income-color' >Date</span>
+            <div class="col-sm-9">
+                <select id ="monthchoosed">
+                    <option value=""></option>
+                    {{#month}}
+                    <option value="{{name}}" onclick="StockChoosedMonth(); showDayOptions();" {{selected}}>{{name}}</option>
+                    {{/month}}
+                </select>
+                <select id="dayoptions">
+                </select>
+
+                <select id ="yearchoosed">
+                    <option value=""></option>
+                    {{#year}}
+                    <option value="{{name}}" onclick="StockChoosedYear()" {{selected}}>{{name}}</option>
+                    {{/year}}
+                </select>
+            </div>
+
+            <br>
+            <label class="control-label col-sm-2" id = 'income-color' for="user">Subcategory</label>
+            <div class="col-sm-9">
+                <select id ="subcategorychoosed">
+                    <option>Other</option>
+                    {{#subcategories}}
+                    <option value="{{name}}" onclick="StockChoosedSubCategory();">{{name}}</option>
+                    {{/subcategories}}
+                </select>
+            </div>
+
+
+            <br>
+            <label class="control-label col-sm-2" id = 'income-color' for="user">Account</label>
+            <div class="col-sm-9">
+                <select id ="walletchoosed">
+                    {{#wallets}}
+                    <option value="{{name}}" onclick="StockChoosedWallet();">{{name}}</option>
+                    {{/wallets}}
+                </select>
+            </div>
+
+            <br>
+            <div>
+                <span id = 'income-color' class="control-label col-sm-2" >Description</span>
+                </br>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="" id="description">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <button type="submit" id = 'income-color' class="btn btn-default btn-block fas fa-check" onclick ="addTransaction(getvalue(), getcategory(), getsubcategory(), getDay(), getMonth(), getYear(), getDescription(), '1', getAccount()); window.location.href = '#' " style="font-size: large"></button>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>   
+
+        </div>
+
+    </div>
+
+</div>

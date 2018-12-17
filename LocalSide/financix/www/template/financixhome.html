@@ -1,0 +1,75 @@
+<div>
+    <!--MENU -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#financixhome">Home</a>
+        <a onclick = "thisMonth()" href="#transactions">History</a>
+        <a onclick = "thisMonth()" href="#data">Expenses Data</a>
+        <a href="#categories">Categories</a>
+        <a onclick = "logout()">Logout</a>
+    </div>
+
+    <div>
+        <!--MENU BUTTON-->
+        <span class = "fas fa-bars " onclick="openNav()"></span>
+
+        <div>
+
+            <div class="">
+                <a class="btn btn-default btn-block custom" style="font-weight: bold; font-size: large">FinanciX</a>
+            </div>
+
+        </div>
+
+        {{#.}}
+        <!--TOTAL BALANCE-->
+        <div id = 'TBalance-box'>
+            <div class = "tbalancetitle" style = "font-size: large">Total Balance</div>
+            <div class = "totalBalance" style=" font-size: large">{{total}} €</div>    
+        </div>
+        <!--Wallets list-->
+        <div>
+            <div>
+                <span class=""></span>
+            </div>
+            {{#wallets}}
+            <div class = "wallet">
+                <div class = "wallet_name">
+                    {{name}}
+                </div>
+
+                <div class="wallet_value">
+                    {{amount}}€
+                </div>
+            </div>
+            {{/wallets}}
+        </div>
+        {{/.}}
+
+        <div class = "wallet" onclick = "window.location.href = '#newwallet'">
+            <div class = "wallet_name">
+                New Wallet
+            </div>
+            <br>
+        </div>
+
+        <!--NewTransactionsButton-->
+        <div class = "newTransactions">
+            <div class = "custom customized smart">
+                <div class="btn-group dropup custom">
+                    <button type="button" class="btn btn-secondary dropdown-toggle fas fa-plus-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </button>
+
+                    <div class="dropdown-menu  newTransactionsMenu">
+                        <a class="dropdown-item fas fa-plus-circle" href="#incomes" onclick="sessionStorage.setItem('choosedcategory', 'Bars & restaurants'); thisMonth()" >Income</a>
+                        <br>
+                        <a class="dropdown-item fas fa-minus-circle" href="#expenses" onclick="sessionStorage.setItem('choosedcategory', 'Bars & restaurants'); thisMonth()">Expense</a>
+                    </div>
+
+                </div>    
+            </div>
+
+        </div>
+
+    </div>
+</div>

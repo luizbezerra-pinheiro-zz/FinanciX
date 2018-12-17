@@ -1,0 +1,17 @@
+<div class="just-padding">
+
+    <div class="list-group list-group-root well">
+        <div class="list-group">
+            {{#.}}
+            <a onclick = "Stockcategory({{category}}); window.location.reload()" class="list-group-item">{{category}}</a>
+            <div class="list-group">
+                {{#subcategories}}
+                <a onclick = "Stocksubcategory({{subcategory}})" class="list-group-item">{{subcategory}}</a>
+                {{/subcategories}}
+            </div>
+            {{/.}}    
+        </div>
+
+    </div>
+
+</div>

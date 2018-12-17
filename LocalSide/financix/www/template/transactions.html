@@ -1,0 +1,51 @@
+<div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#financixhome">Home</a>
+        <a href="#transactions">History</a>
+        <a href="#data">Expenses Data</a>
+        <a href="#categories">Categories</a>
+        <a onclick = "logout()">Logout</a>
+    </div>
+
+    <div>
+
+        <span class = "fas fa-bars " onclick="openNav()"></span>
+
+        <div class="">
+            <a class="btn btn-default btn-block custom" style="font-weight: bold; font-size: large">FinanciX</a>
+        </div>
+
+        <div class = "" id = "separator-bot">
+            <a class="btn btn-default btn-block custom-centered-text" style=" font-size: large">Transactions' History</a>
+        </div>
+        
+        <div class = "mini-calendar">
+            <button id="btnPrev" onclick = "prevMonth()" type="button">Prev</button>
+            <a class="normal-centered-text" id ="month_text"><script>getMonthText();</script></a>
+            <button id="btnNext" onclick = "nextMonth()" type="button">Next</button>
+        </div>
+        {{#.}}
+        
+        <div>
+            <div>{{day}}</div>
+            {{#transactions}}
+            <div class = "btn-group dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class = "">{{category}}{{description}}</a> <a class = "right float">{{value}}‎€</a>
+                </button>
+                <br>
+
+                <div class="dropdown-menu custom" aria-labelledby="dropdownMenu1">
+                    <a class = "dropdown-item custom">{{subcategory}}</a>
+                    <br>
+                    <a class = "dropdown-item custom" onclick = "removeTransaction('{{id}}');">Remove Transaction</a>
+                    <br>
+                </div>
+
+            </div>
+            {{/transactions}}
+        </div>
+        {{/.}}
+    </div>  
+</div>

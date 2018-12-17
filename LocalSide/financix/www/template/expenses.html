@@ -1,0 +1,249 @@
+<div id='calc-contain'>
+
+    <form name="calculator">    
+        <!--Calculator's screen-->
+        <input class = " calculators-screen expense" type="text" style = "font-size: xx-large" name="answer" />
+        
+            <div class="form-group col-sm-12">
+                <label class="control-label col-sm-2" id = 'expense-color' for="user">Category</label>
+                <div class="col-sm-9">
+                    <select id ="categorychoosed">
+                        {{#.}}
+                        <option value="{{category}}" onclick="StockChoosedCategory();">{{category}}</option>
+                        {{/.}}
+                    </select>
+                </div>
+            </div>
+
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '1'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">1</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '2'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">2</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '3'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">3</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '4'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">4</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '5'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">5</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '6'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">6</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '7'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">7</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '8'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">8</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '9'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">9</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value = ''">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">C</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '0'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">0</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" custom calculator-button" onclick="calculator.answer.value += '.'">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">.</i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class=" custom calculator-button aux">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton"></i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        
+            <div class=" custom calculator-button" onclick = "Stockvalue(calculator.answer.value); sessionStorage.setItem('choosed_subcategory','');window.location.href = '#expenses_options'; ">
+
+                <div class="content">
+
+                    <div class="table">
+
+                        <div class="table-cell">
+
+                            <i class="fa fa-bouton">V</i>
+                   
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+</div>

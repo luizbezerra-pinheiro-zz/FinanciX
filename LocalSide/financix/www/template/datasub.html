@@ -1,0 +1,69 @@
+<div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#financixhome">Home</a>
+        <a href="#transactionsDefault">History</a>
+        <a href="#data">Expenses Data</a>
+        <a href="#categories">Categories</a>
+        <a onclick = "logout()">Logout</a>
+    </div>
+
+
+    <div>
+        <!--MENU BUTTON-->
+        <span class = "fas fa-bars " onclick="openNav()"></span>
+        <div>
+
+            <div class="">
+                <a class="btn btn-default btn-block custom" style="font-weight: bold; font-size: large">FinanciX</a>
+            </div>
+
+            <div class = "">
+                <a class="btn btn-default btn-block custom-subtitle-categories-text" style=" font-size: large">{{category}}</a>
+            </div>
+
+        </div>
+
+        <div class = "mini-calendar">
+            <button id="btnPrev" onclick = "prevMonth()" type="button">Prev</button>
+            <a class="normal-centered-text" id ="month_text"><script>getMonthText();</script></a>
+            <button id="btnNext" onclick = "nextMonth()" type="button">Next</button>
+        </div>
+
+        <div id = "subcategorychart"></div>
+
+        <div>
+            <div class = "custom-line" >
+                <div class = "custom1-20"></div>
+                <a class="custom14-20" role="button">
+                    {{category}}
+                </a>
+                <div class = "custom4-20">{{total-expensed}}</div>
+                <br>
+
+                <div class = "custom1-20"></div>
+            </div>
+           
+            {{#subcategories}}
+            <div class = "custom-line" >
+                <div class = "custom1-20"></div>
+                <a class="custom14-20" role="button">
+                    {{name}}
+                </a>
+                <div class = "custom4-20">{{total-expensed}}</div>
+                <br>
+
+                <div class = "custom1-20"></div>
+            </div>
+            {{/subcategories}}
+            
+            <!--return-->
+            <div class = "custom-line" >
+               
+                <div class = "custom4-20"><a href="#data">Return</a></div>
+             
+            </div>
+        </div>
+    </div>
+
+</div>
