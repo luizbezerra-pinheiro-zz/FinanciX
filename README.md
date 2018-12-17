@@ -8,4 +8,6 @@ The application itself is writen in Web language (HTML, Javascript, CSS), to mak
 
 As the server is in localhost, to be able to use the Database it's mandatory that the Smartphone and the server are in the same network.
 
+
+This project was in collaboration with other student, I made the backend and he made the frontend.
 In the future I will make the server online using http://000webhost.com/
