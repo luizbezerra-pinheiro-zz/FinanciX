@@ -7,9 +7,9 @@
             <div class="form-group col-sm-12">
                 <label class="control-label col-sm-2" id = 'expense-color' for="user">Category</label>
                 <div class="col-sm-9">
-                    <select id ="categorychoosed">
+                    <select id ="categorychoosed" onchange="StockChoosedCategory();">
                         {{#.}}
-                        <option value="{{category}}" onclick="StockChoosedCategory();">{{category}}</option>
+                        <option value="{{category}}">{{category}}</option>
                         {{/.}}
                     </select>
                 </div>

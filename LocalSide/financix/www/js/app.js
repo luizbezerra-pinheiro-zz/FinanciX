@@ -1,5 +1,8 @@
 //var url = 'http://cuboide.polytechnique.fr/~luiz.bezerra-pinheiro';
-var url =  'http://localhost/financix';
+//var url =  'http://localhost/financix';
+var url = 'http://192.168.43.18/financix';
+//var url = 'https://financixserverdata.000webhostapp.com/financix';
+//var url = 'http://129.104.206.62/financix';
 
 function getChartCategories_month() {
     var access_token = localStorage.getItem("access_token");
@@ -144,6 +147,7 @@ function addCategory() {
                 alert(data.error);
                 return false;
             }
+            location.reload();
         },
         error: function (data) {
             console.log(data);
@@ -181,6 +185,7 @@ function addSubCategory_1(name_mother, subcategory_name) {
                 alert(data.error);
                 return false;
             }
+            location.reload();
         },
         error: function (data) {
             console.log(data);
@@ -226,6 +231,7 @@ function addTransaction(value, category, subcategory, day, month, year, descript
                 alert(data.error);
                 return false;
             }
+            location.reload();                                
         },
         error: function (data) {
             console.log(data);
@@ -259,6 +265,7 @@ function addWallet() {
                 alert(data.error);
                 return false;
             }
+            location.reload();
         },
         error: function (data) {
             console.log(data);
@@ -1075,14 +1082,13 @@ $(document).ready(function () {
                             console.log(data);
                             return false;
                         }
-                    });
+                    }); 
 
                 }
                 $.get("template/login.html", function (templates) {
                     var page = $(templates).html();
                     $("#container").html(page);
                 }, "html");
-
                 break;
 
         }

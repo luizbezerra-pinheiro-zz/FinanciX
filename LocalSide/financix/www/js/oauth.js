@@ -1,5 +1,8 @@
 //var url = 'http://cuboide.polytechnique.fr/~luiz.bezerra-pinheiro';
-var url = 'http://localhost/financix';
+//var url = 'http://localhost/financix';
+var url = 'http://192.168.43.18/financix';
+//var url = 'https://financixserverdata.000webhostapp.com/financix';
+//var url = 'http://129.104.206.62/financix';
 
 var client_id = 'testclient';
 
@@ -58,6 +61,7 @@ function login_1(username, password) {
             },
             beforeSend: function (xhr) {
                 xhr.setRequestHeader('Authorization', 'Basic ' + btoa(client_id + ':' + client_mdp));
+                
             },
             data: {
                 grant_type: "password",
@@ -124,7 +128,6 @@ function inscription(currency) {
         success: function (data) {
             console.log(data);
             if (data.success) {
-                alert(data.success);
                 login_1(username, password1);
                 return true;
             } else {

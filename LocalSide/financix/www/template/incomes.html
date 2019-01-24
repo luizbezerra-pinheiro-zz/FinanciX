@@ -7,9 +7,9 @@
             <div class="form-group col-sm-12">
                 <label class="control-label col-sm-2" for="user" id = 'income-color'>Category</label>
                 <div class="col-sm-9">
-                    <select id ="categorychoosed">
+                    <select id ="categorychoosed" onchange="StockChoosedCategory(); ">
                         {{#.}}
-                        <option value="{{category}}" onclick="StockChoosedCategory();">{{category}}</option>
+                        <option value="{{category}}">{{category}}</option>
                         {{/.}}
                     </select>
                 </div>
@@ -229,7 +229,7 @@
 
             </div>
         
-            <div class=" custom calculator-button" onclick = "Stockvalue(calculator.answer.value); sessionStorage.setItem('choosed_subcategory','');  window.location.href = '#incomes_options'; ">
+            <div class=" custom calculator-button" onclick = "Stockvalue(calculator.answer.value); sessionStorage.setItem('choosed_subcategory',''); window.location.href = '#incomes_options'; ">
 
                 <div class="content">
 

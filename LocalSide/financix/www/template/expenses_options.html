@@ -12,22 +12,23 @@
     <div>
 
 
+         
         <div class="mobile-wrapper">
             <span class="control-label col-sm-2" id = 'expense-color'>Date</span>
             <div class="col-sm-9">
-                <select id ="monthchoosed">
+                <select id ="monthchoosed" onchange="StockChoosedMonth(); showDayOptions();">
                     <option value=""></option>
                     {{#month}}
-                    <option value="{{name}}" onclick="StockChoosedMonth(); showDayOptions();" {{selected}}>{{name}}</option>
+                    <option value="{{name}}" {{selected}}>{{name}}</option>
                     {{/month}}
                 </select>
-                <select id="dayoptions">
+                <select id="dayoptions" onchange="StockChoosedDay();">
                 </select>
 
-                <select id ="yearchoosed">
+                <select id ="yearchoosed" onchange="StockChoosedYear();">
                     <option value=""></option>
                     {{#year}}
-                    <option value="{{name}}" onclick="StockChoosedYear()" {{selected}}>{{name}}</option>
+                    <option value="{{name}}" {{selected}}>{{name}}</option>
                     {{/year}}
                 </select>
             </div>
@@ -35,10 +36,10 @@
             <br>
             <label class="control-label col-sm-2" id = 'expense-color' for="user">Subcategory</label>
             <div class="col-sm-9">
-                <select id ="subcategorychoosed">
-                    <option>Other</option>
+                <select id ="subcategorychoosed" onchange="StockChoosedSubCategory();">
+                    <option></option>
                     {{#subcategories}}
-                    <option value="{{name}}" onclick="StockChoosedSubCategory();">{{name}}</option>
+                    <option value="{{name}}">{{name}}</option>
                     {{/subcategories}}
                 </select>
             </div>
@@ -47,9 +48,9 @@
             <br>
             <label class="control-label col-sm-2" id = 'expense-color' for="user">Account</label>
             <div class="col-sm-9">
-                <select id ="walletchoosed">
+                <select id ="walletchoosed" onchange="  StockChoosedWallet();">
                     {{#wallets}}
-                    <option value="{{name}}" onclick="StockChoosedWallet();">{{name}}</option>
+                    <option value="{{name}}">{{name}}</option>
                     {{/wallets}}
                 </select>
             </div>
